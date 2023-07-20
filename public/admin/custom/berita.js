@@ -11,38 +11,15 @@ function base_url(string_url) {
 $(function () {
     'use strict';
     $('#tbl_berita').DataTable();
+    $('#summernote2').summernote();
 });
 
 function add_berita() {
     $("#my-modal").modal('show');
     $('#summernote').summernote();
-    $('#summernote2').summernote();
+
 }
 
-// function simpan_data_berita() {
-//     var tbl = document.getElementById('tbody_gambar2_berita');
-//     var RowTable = tbl.rows.length;
-//     if (RowTable > 0) {
-//         for (var i = 0; i < tbl.rows.length; i++) {
-//             var imgInput = tbl.rows[i].cells[0].querySelector('input[type="file"]');
-//             var img = imgInput.files[0];
-//             var keterangan = tbl.rows[i].cells[1].querySelector('input').value;
-//             var formData = new FormData();
-//             formData.append('file_img', img);
-//             formData.append('keterangan', keterangan);
-//             $.ajax({
-//                 url: base_url("usr/berita/insert_berita_detail"),
-//                 type: 'POST',
-//                 data: formData,
-//                 processData: false,
-//                 contentType: false,
-//             });
-//         }
-//         insert_berita();
-//     } else {
-//         insert_berita();
-//     }
-// }
 
 function simpan_data_berita() {
     if ($("#container").children().length > 0) {
@@ -94,23 +71,6 @@ function insert_berita() {
 }
 
 
-// function tambah_baris_gambar() {
-//     var table = document.getElementById("tbody_gambar2_berita");
-//     var row = document.createElement("tr");
-//     // Buat elemen sel baru dan tambahkan isi teks
-//     var cell1 = document.createElement("td");
-//     var cell2 = document.createElement("td");
-//     var cell3 = document.createElement("td");
-//     cell1.innerHTML = "<input type='file' class='form-control' name='img_berita[]'>";
-//     cell2.innerHTML = "<input type='text' class='form-control' name='deskripsi' id='deskripsi' placehoslder='isi deskripsi'>";
-//     cell3.innerHTML = "<button class='btn btn-md btn-danger' type='button' onclick='delete_input_gmbr(this)'><i class='fa fa-trash'></i></button>";
-//     // Tambahkan sel ke dalam baris
-//     row.appendChild(cell1);
-//     row.appendChild(cell2);
-//     row.appendChild(cell3);
-//     // Tambahkan baris ke dalam tabel
-//     table.appendChild(row);
-// }
 
 function tambah_baris_gambar() {
     var container = document.getElementById("container");

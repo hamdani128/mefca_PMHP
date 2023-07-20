@@ -68,25 +68,25 @@ class Pendaftaran extends CI_Controller
                 $error = array('error' => $this->upload->display_errors());
             } else {
                 $data = array('upload_data' => $this->upload->data());
-                $datainsert = [
-                    'no_registrasi' => $no_register,
-                    'kategori' => $ipi,
-                    'instansi' => $instansi,
-                    'nama' => $nama_perusahaan,
-                    'alamat' => $alamat,
-                    'tlp' => $telepon,
-                    'fax' => $fax,
-                    'email' => $email,
-                    'file_hccp' => $data['upload_data']['file_name'],
-                    'tgl_hccp' => $tgl_hccp,
-                    'no_hccp' => $no_hccp,
-                    'product_hccp' => $product_hccp,
-                    'ratting_hccp' => $ratting_hccp,
-                    'status' => 'Registered',
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s')
-                ];
             }
+            $datainsert = [
+                'no_registrasi' => $no_register,
+                'kategori' => $ipi,
+                'instansi' => $instansi,
+                'nama' => $nama_perusahaan,
+                'alamat' => $alamat,
+                'tlp' => $telepon,
+                'fax' => $fax,
+                'email' => $email,
+                'file_hccp' => $data['upload_data']['file_name'],
+                'tgl_hccp' => $tgl_hccp,
+                'no_hccp' => $no_hccp,
+                'product_hccp' => $product_hccp,
+                'ratting_hccp' => $ratting_hccp,
+                'status' => 'Registered',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ];
         } else {
             $datainsert = [
                 'no_registrasi' => $no_register,

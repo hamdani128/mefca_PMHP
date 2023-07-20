@@ -38,7 +38,7 @@
     <![endif]-->
 
     <!-- Preloader Start -->
-    <div class="se-pre-con"></div>
+    <!-- <div class="se-pre-con"></div> -->
     <!-- Preloader Ends -->
 
 
@@ -50,7 +50,7 @@
 
     <!-- content -->
     <?php if ($content) { ?>
-        <?php $this->load->view($content); ?>
+    <?php $this->load->view($content); ?>
     <?php } ?>
     <!-- End Conten -->
 

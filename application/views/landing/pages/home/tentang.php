@@ -14,11 +14,11 @@
                             <div class="item" style="background-image: url(public/landing/img/banner-3.jpg);">
                                 <div class="col-lg-12 pr-5 pr-md-15 pr-xs-15 team-single-info">
                                     <div class="thumb">
-                                        <img src="<?= base_url() ?>public/landing/img/profile.png" alt="Thumb" style="height: 70%;width: 70%;">
+                                        <img src="<?= base_url() ?>public/upload/pimpinan/<?= $pimpinan->file_img; ?>" alt="Thumb" style="height: 70%;width: 70%;">
                                     </div>
                                 </div>
-                                <h4 style="color: white;">MUHAMMAD FARID HAKIM, S.PI</h4>
-                                <h4 style="color: white;">Kepala UPTD PMPH Medan</h4>
+                                <h4 style="color: white;"><?= $pimpinan->nama; ?></h4>
+                                <h4 style="color: white;"><?= $pimpinan->jabatan; ?></h4>
                             </div>
                         </div>
                     </div>

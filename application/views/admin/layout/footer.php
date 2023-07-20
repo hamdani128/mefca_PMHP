@@ -50,6 +50,10 @@
 <script src="<?= base_url() ?>public/admin/custom/opr_kimia_air_trans.js"></script>
 <script src="<?= base_url() ?>public/admin/custom/opr_permohonan.js"></script>
 <script src="<?= base_url() ?>public/admin/custom/opr_sdm.js"></script>
+<script src="<?= base_url() ?>public/admin/custom/opr_parameter.js"></script>
+<script src="<?= base_url() ?>public/admin/custom/opr_metode_uji.js"></script>
+<script src="<?= base_url() ?>public/admin/custom/opr_daftar_uji.js"></script>
+
 <script src="<?= base_url() ?>public/admin/custom/users_medical.js"></script>
 <script src="<?= base_url() ?>public/admin/custom/users_mikrobiologi.js"></script>
 <script src="<?= base_url() ?>public/admin/custom/users_kimia_air.js"></script>

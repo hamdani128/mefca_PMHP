@@ -45,19 +45,26 @@
         <img src="<?= base_url() ?>public/admin/img/tuna.jpg" class="wd-100p ht-100p object-fit-cover" alt="">
         <div class="overlay-body bg-black-6 d-flex align-items-center justify-content-center">
             <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 rounded bd bd-white-2 bg-black-7">
-                <div class="signin-logo tx-center tx-28 tx-bold tx-white"><span class="tx-normal">[</span> Mefca <span class="tx-info">App</span> <span class="tx-normal">]</span></div>
+                <div class="signin-logo tx-center tx-28 tx-bold tx-white"><span class="tx-normal">[</span> Mefca <span
+                        class="tx-info">App</span> <span class="tx-normal">]</span></div>
                 <div class="tx-white-5 tx-center mg-b-60">Adminitrator aplikasi</div>
 
                 <div class="form-group">
-                    <input type="text" name="username" id="username" class="form-control fc-outline-dark" placeholder="Enter your username">
+                    <input type="text" name="username" id="username" class="form-control fc-outline-dark"
+                        placeholder="Enter your username">
                 </div>
                 <!-- form-group -->
                 <div class="form-group">
-                    <input type="password" name="password" id="password" class="form-control fc-outline-dark" placeholder="Enter your password">
+                    <input type="password" name="password" id="password" class="form-control fc-outline-dark"
+                        placeholder="Enter your password">
                     <a href="" class="tx-info tx-12 d-block mg-t-10">Forgot password?</a>
                 </div>
                 <!-- form-group -->
                 <button type="button" class="btn btn-info btn-block" onclick="login_administrator()">Log In</button>
+                <a href="<?= base_url() ?>" class="btn btn-info btn-block btn-light">
+                    <i class="fa fa-home"></i>
+                    Home
+                </a>
 
                 <!-- <div class="mg-t-60 tx-center">Not yet a member? <a href="" class="tx-info">Sign Up</a></div> -->
             </div>

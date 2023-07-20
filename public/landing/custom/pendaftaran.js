@@ -54,7 +54,6 @@ function pendaftaran() {
                 document.getElementById("no_dokumen").innerHTML = data.no_register;
                 $("#my-modal-success").modal("show");
             }
-
         }).catch(error => console.error(error));
     }
 }

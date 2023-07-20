@@ -50,10 +50,10 @@
                 <div class="attr-nav button-group">
                     <ul>
                         <li class="button button-group">
-                            <a href="#" onclick="register_akun()">Daftar</a>
+                            <a href="#" onclick="register_akun()">Registrasi</a>
                         </li>
                         <li class="button">
-                            <a href="<?= base_url('usr/login') ?>">Masuk</a>
+                            <a href="<?= base_url('usr/login') ?>">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -92,7 +92,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="">Instansi</label>
+                                <label for="">Instansi / UMKM / Mahasiswa</label>
                                 <select name="cmb_instansi" id="cmb_instansi" class="form-control">
                                     <option value="">Pilih</option>
                                     <option value="Perusahaan">Perusahaan</option>
@@ -100,16 +100,16 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="">Nama Perusahaan</label>
-                                <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama Lengkap">
+                                <label for="">Nama / Instansi</label>
+                                <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama / Instansi">
                             </div>
                             <div class="form-group">
                                 <label for="">Alamat</label>
                                 <textarea name="alamat" id="alamat" cols="3" rows="3" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="">Telepon</label>
-                                <input type="text" name="telepon" id="telepon" class="form-control" placeholder="Masukkan Telepon">
+                                <label for="">No.Kontak / HP</label>
+                                <input type="text" name="telepon" id="telepon" class="form-control" placeholder="No.Kontak / HP">
                             </div>
                             <div class="form-group">
                                 <label for="">Fax</label>

@@ -132,52 +132,36 @@ class Galeri extends CI_Controller
         $now = date("Y-m-d H:i:s");
         $judul = $this->input->post('judul');
         $tanggal = $this->input->post('tanggal');
-        $new_name = time() . "-" . date('Ymd');
+        $file_url = $this->input->post('file_url');
         $deskripsi = $this->input->post("summernoteValue");
         $penulis = $this->input->post("penulis");
         $user_id = $this->session->userdata("user_id");
-
-        $config['upload_path'] = './public/upload/galeri/video/';
-        $config['allowed_types'] = 'mp4|3gp';
-        $config['file_name'] = $new_name;
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('file_image')) {
-            $response = array(
-                'status' => 'img_error',
-                'message' => $this->upload->display_errors() . " Upload failed",
-            );
-        } else {
-            $data = $this->upload->data();
-            $data2 = array(
-                'file_img' => $data['file_name'],
-                'judul' => $judul,
-                'tanggal' => $tanggal,
-                'deskripsi' => $deskripsi,
-                'penulis' => $penulis,
-                'user_id' => $user_id,
-                'created_at' => $now,
-                'updated_at' => $now
-            );
-            $this->db->insert("kegiatan_video", $data2);
-
+        $data1 = array(
+            'file_url' => $file_url,
+            'judul' => $judul,
+            'tanggal' => $tanggal,
+            'deskripsi' => $deskripsi,
+            'penulis' => $penulis,
+            'user_id' => $user_id,
+            'created_at' => $now,
+            'updated_at' => $now
+        );
+        $query = $this->db->insert("kegiatan_video", $data1);
+        if ($query) {
             $response = array(
                 'status' => 'success',
                 'message' => 'Video uploaded successfully',
             );
         }
-        echo json_encode($response);
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($response));
     }
 
 
     public function delete_video()
     {
         $id = $this->input->post('id');
-        $value = $this->db->where('id', $id)->get('kegiatan_video')->row();
-        $videoPath = './public/upload/galeri/video/' . $value->file_img;
-        if (file_exists($videoPath)) {
-            unlink($videoPath);
-        }
         $query = $this->db->where('id', $id)->delete('kegiatan_video');
         if ($query) {
             $response = array(

@@ -108,25 +108,50 @@ function delete_kegiatan(id, tanggal, judul) {
     });
 }
 
+function DeletePhoto(id) {
+    Swal.fire({
+        title: 'Konfirmasi',
+        text: 'Anda yakin ingin Menghapus Data ini ?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Delete',
+        cancelButtonText: 'Batal',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            var formdata = new FormData();
+            formdata.append('id', id);
+            fetch(base_url('usr/galeri/delete_photo'), {
+                method: 'POST',
+                body: formdata
+            }).then(response => response.json()).then(data => {
+                if (data.status == 'success') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        text: 'Data Berhasil Terhapus !'
+                    });
+                    document.location.reload();
+                }
+            }).catch(error => console.error(error));
+        }
+    });
+}
+
+
 
 function simpan_data_video() {
-    var file = document.getElementById("file_image").files.lenght;
+    var file_url = $("#file_url").val();;
     var tanggal = $("#tanggal").val();
     var judul = $("#judul").val();
     var penulis = $("#penulis").val();
     var formupload = document.getElementById("form_video");
     var summernoteValue = $('#summernote').summernote('code');
-    if (tanggal == "" || judul == "" || penulis == "") {
+    if (file_url == "" || tanggal == "" || judul == "" || penulis == "") {
         Swal.fire({
             icon: 'warning',
             title: 'Alert',
             text: 'Wajib Mengisi Field - Field Yang Sudah Tersedia !'
-        });
-    } else if (file == 0) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Alert',
-            text: 'Wajib Mengupload File !'
         });
     } else {
         $('.button-prevent').attr('disabled', 'true');
@@ -154,4 +179,34 @@ function simpan_data_video() {
             }
         });
     }
+}
+
+function DeleteVideo(id) {
+    Swal.fire({
+        title: 'Konfirmasi',
+        text: 'Anda yakin ingin Menghapus Data ini ?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Delete',
+        cancelButtonText: 'Batal',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            var formdata = new FormData();
+            formdata.append('id', id);
+            fetch(base_url('usr/galeri/delete_video'), {
+                method: 'POST',
+                body: formdata
+            }).then(response => response.json()).then(data => {
+                if (data.status == 'success') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        text: 'Data Berhasil Terhapus !'
+                    });
+                    document.location.reload();
+                }
+            }).catch(error => console.error(error));
+        }
+    });
 }

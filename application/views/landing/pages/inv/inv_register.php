@@ -6,47 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title_pdf; ?></title>
     <style>
-        #table {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
+    #table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-        #table td,
-        #table th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
+    #table td,
+    #table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
 
-        #table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+    #table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-        #table tr:hover {
-            background-color: #ddd;
-        }
+    #table tr:hover {
+        background-color: #ddd;
+    }
 
-        #table th {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: left;
-            background-color: rgb(7, 54, 79);
-            color: white;
-            font-size: 12px;
-            text-align: center;
-        }
+    #table th {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        background-color: rgb(7, 54, 79);
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
     </style>
 </head>
 
 <body>
     <div style="text-align:center">
-        <span style="font-size: 16px;font-weight: 700;"><u>Surat Registrasi</u></span>
+        <span style="font-size: 16px;font-weight: 700;"><u>SURAT PERMOHONAN</u></span>
     </div>
     <table style="width: 100%;font-family: 'Times New Roman', Times, serif;font-size: 14px;padding-top: 5%;">
         <tr>
             <td style="width: 80%;"></td>
             <td style="width: 40%;">
-                <span>Sumatera Utara, <?= date("d F Y", strtotime($value->created_at)); ?></span><br>
+                <span>Medan, <?= date("d F Y", strtotime($value->created_at)); ?></span><br>
                 <span></span><br>
                 <span>Kepada Yth,</span><br>
                 <span></span>
@@ -70,7 +70,7 @@
         <tr>
             <td style="width: 10%;"></td>
             <td>
-                <p>Dengan ini menyatakan bahwasanya telah terdaftar dengan Data instansi sbb :
+                <p>Dengan ini menyatakan bahwasanya telah terdaftar dengan data :
                 </p>
             </td>
             <td style="width: 5%;"></td>
@@ -87,17 +87,17 @@
                         <td style="width: 50%;"><?= $value->no_registrasi; ?></td>
                     </tr>
                     <tr>
-                        <td style="width: 20%;">Kategori Instansi</td>
+                        <td style="width: 20%;">Jenis Pengujian</td>
                         <td style="width: 2%;">:</td>
                         <td style="width: 50%;"><?= $value->kategori; ?></td>
                     </tr>
                     <tr>
-                        <td style="width: 20%;">Instansi</td>
+                        <td style="width: 20%;">Kategori Pemohon</td>
                         <td style="width: 2%;">:</td>
                         <td style="width: 50%;"><?= $value->instansi; ?></td>
                     </tr>
                     <tr>
-                        <td style="width: 20%;">Nama Instansi</td>
+                        <td style="width: 20%;">Nama / Instansi</td>
                         <td style="width: 2%;">:</td>
                         <td style="width: 50%;"><?= $value->nama; ?></td>
                     </tr>
@@ -107,7 +107,7 @@
                         <td style="width: 50%;"><?= $value->alamat; ?></td>
                     </tr>
                     <tr>
-                        <td style="width: 20%;">Telepon</td>
+                        <td style="width: 20%;">No.Kontak/HP</td>
                         <td style="width: 2%;">:</td>
                         <td style="width: 50%;"><?= $value->tlp; ?></td>
                     </tr>
